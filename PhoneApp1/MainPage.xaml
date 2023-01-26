@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhoneApp1.MainPage"
+             Title="MvvM Employee">
+    <StackLayout Margin="25, 10, 0, 0">
+        <Label Text="{Binding FIO}" FontSize="Medium" Margin="0, 0, 0, 5"/>
+        <Label Text="{Binding Stuff}" FontSize="Medium" Margin="0, 0, 0, 5"/>
+        <HorizontalStackLayout Margin="0, 0, 0, 5">
+            <Label Text="{Binding Salary}" FontSize="Medium" WidthRequest="150"/>
+            <Button Text="+" Command="{Binding plusSalary}" Style="{StaticResource btnStyle}"/>
+            <Button Text="-" Command="{Binding minusSalary}" Style="{StaticResource btnStyle}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0, 0, 0, 5">
+            <Label Text="{Binding Exp}" FontSize="Medium" WidthRequest="150"/>
+            <Button Text="+" Command="{Binding plusExp}" Style="{StaticResource btnStyle}"/>
+            <Button Text="-" Command="{Binding minusExp}" Style="{StaticResource btnStyle}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0, 0, 0, 5">
+            <Label Text="{Binding Factor}" FontSize="Medium" WidthRequest="150"/>
+            <Button Text="+" Command="{Binding plusFactor}" Style="{StaticResource btnStyle}"/>
+            <Button Text="-" Command="{Binding minusFactor}" Style="{StaticResource btnStyle}"/>
+        </HorizontalStackLayout>
+        <Button Text="Рассчитать" Command="{Binding Calculate}" Style="{StaticResource btnStyle2}"/>
+        <Label Text="{Binding Prize}" FontSize="Medium"/>
+    </StackLayout>
+</ContentPage>
